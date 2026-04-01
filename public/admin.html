@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Management System</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; background-color: #f4f6f9; }
+        header { background-color: #2c3e50; color: white; padding: 20px; text-align: center; }
+        nav { background-color: #34495e; padding: 10px; text-align: center; }
+        nav a { color: white; margin: 15px; text-decoration: none; font-weight: bold; }
+        nav a:hover { color: #1abc9c; }
+        .container { width: 80%; margin: auto; margin-top: 30px; }
+        .card { background: white; padding: 20px; margin-bottom: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h2 { color: #2c3e50; }
+        label { font-weight: bold; }
+        input, select { width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ccc; box-sizing: border-box;}
+        button { background-color: #138a72; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background-color: #0f6e5b; }
+        table { width: 100%; border-collapse: collapse; }
+        table, th, td { border: 1px solid #ddd; }
+        th { background-color: #2c3e50; color: white; }
+        th, td { padding: 10px; text-align: center; }
+        footer { text-align: center; padding: 15px; background-color: #2c3e50; color: white; margin-top: 40px; }
+    </style>
+</head>
+<body>
+<header>
+    <h1>University Management System</h1>
+    <h3>Admin Management Module</h3>
+</header>
+<nav>
+    <a href="admin.html">Dashboard</a>
+    <a href="student.html">Students</a>
+    <a href="faculty.html">Faculty</a>
+</nav>
+
+<div class="container">
+    <div class="card">
+        <h2>Add New Admin</h2>
+        <form id="addAdminForm">
+            <label for="adminId">Admin ID</label>
+            <input type="number" id="adminId" placeholder="Enter Admin ID" required>
+            <label for="adminName">Admin Name</label>
+            <input type="text" id="adminName" placeholder="Enter Full Name" required>
+            <label for="adminRole">Role</label>
+            <select id="adminRole">
+                <option value="Super Admin">Super Admin</option>
+                <option value="HR Admin">HR Admin</option>
+                <option value="Academic Admin">Academic Admin</option>
+                <option value="Finance Admin">Finance Admin</option>
+            </select>
+            <button type="submit">Add Admin</button>
+        </form>
+    </div>
+
+    <div class="card">
+        <h2>Admin List</h2>
+        <table id="adminTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Role</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Populated via API -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<footer>
+    &copy; 2026 University Management System | Connected using C++ httplib
+</footer>
+
+<script type="module" src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Faculty Management System</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        body { display: flex; background-color: #eef2f7; }
+        .sidebar { width: 250px; background: #1f2d3d; color: white; min-height: 100vh; padding: 20px; }
+        .sidebar h2 { text-align: center; margin-bottom: 30px; }
+        .sidebar a { display: block; color: white; padding: 12px; text-decoration: none; margin-bottom: 10px; border-radius: 5px; }
+        .sidebar a:hover { background: #00b894; }
+        .main { flex: 1; padding: 30px; }
+        .header { background: white; padding: 20px; border-radius: 8px; margin-bottom: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .card { background: white; padding: 20px; margin-bottom: 25px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        h3 { margin-bottom: 15px; color: #1f2d3d; }
+        label { font-weight: bold; }
+        input, select { width: 100%; padding: 10px; margin: 8px 0 15px; border-radius: 5px; border: 1px solid #ccc; }
+        button { background: #018768; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #016b52; }
+        table { width: 100%; border-collapse: collapse; }
+        table, th, td { border: 1px solid #ddd; }
+        th { background: #1f2d3d; color: white; }
+        th, td { padding: 10px; text-align: center; }
+    </style>
+</head>
+<body>
+<div class="sidebar">
+    <h2>University CMS</h2>
+    <a href="admin.html">Admin</a>
+    <a href="student.html">Students</a>
+    <a href="faculty.html">Faculty</a>
+</div>
+
+<div class="main">
+    <div class="header">
+        <h2>Faculty Management System</h2>
+        <p>Manage faculty details, departments and salaries</p>
+    </div>
+
+    <div class="card">
+        <h3>Register New Faculty</h3>
+        <form id="addFacultyForm">
+            <label for="facId">Faculty ID</label>
+            <input type="number" id="facId" placeholder="Enter Faculty ID" required>
+            <label for="facName">Name</label>
+            <input type="text" id="facName" placeholder="Enter Full Name" required>
+            <label for="facDept">Department</label>
+            <select id="facDept">
+                <option value="Computer Science">Computer Science</option>
+                <option value="BCA">BCA</option>
+            </select>
+            <label for="facDesignation">Designation</label>
+            <select id="facDesignation">
+                <option value="Professor">Professor</option>
+                <option value="Assistant Professor">Assistant Professor</option>
+            </select>
+            <label for="facSalary">Salary</label>
+            <input type="number" step="0.01" id="facSalary" placeholder="Enter Salary" required>
+            <button type="submit">Register Faculty</button>
+        </form>
+    </div>
+
+    <div class="card">
+        <h3>Faculty Records</h3>
+        <table id="facultyTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Designation</th>
+                    <th>Salary</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Fetched from API -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script type="module" src="faculty.js"></script>
+</body>
+</html>

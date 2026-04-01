@@ -1,0 +1,29 @@
+# College Management System - Git Ignore
+
+# Binaries and Object Files
+*.exe
+*.o
+*.out
+college_app
+
+# Build Directories
+build/
+bin/
+obj/
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS Specific
+Thumbs.db
+.DS_Store
+
+# RTF Documentation (Original Prototype)
+"OVERALL COLLEGE MANAGEMENT SYSTEM PROJECT.rtf"

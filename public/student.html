@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student Management System</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        body { display: flex; background-color: #f4f6f9; }
+        .sidebar { width: 250px; background: #2c3e50; color: white; min-height: 100vh; padding: 20px; }
+        .sidebar h2 { text-align: center; margin-bottom: 30px; }
+        .sidebar a { display: block; color: white; padding: 12px; text-decoration: none; margin-bottom: 10px; border-radius: 5px; }
+        .sidebar a:hover { background: #1abc9c; }
+        .main { flex: 1; padding: 30px; }
+        .header { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-bottom: 30px; }
+        .card { background: white; padding: 20px; margin-bottom: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        h3 { margin-bottom: 15px; color: #2c3e50; }
+        label { font-weight: bold; }
+        input, select { width: 100%; padding: 10px; margin: 8px 0 15px; border-radius: 5px; border: 1px solid #ccc; }
+        button { background: #138a72; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background: #0f6e5b; }
+        table { width: 100%; border-collapse: collapse; }
+        table, th, td { border: 1px solid #ddd; }
+        th { background: #2c3e50; color: white; }
+        th, td { padding: 10px; text-align: center; }
+    </style>
+</head>
+<body>
+<div class="sidebar">
+    <h2>University CMS</h2>
+    <a href="admin.html">Admin</a>
+    <a href="student.html">Students</a>
+    <a href="faculty.html">Faculty</a>
+</div>
+
+<div class="main">
+    <div class="header">
+        <h2>Student Management System</h2>
+        <p>Manage all student records efficiently</p>
+    </div>
+
+    <div class="card">
+        <h3>Add New Student</h3>
+        <form id="addStudentForm">
+            <label for="stuId">Student ID</label>
+            <input type="number" id="stuId" placeholder="Enter Student ID" required>
+            <label for="stuName">Name</label>
+            <input type="text" id="stuName" placeholder="Enter Full Name" required>
+            <label for="stuAge">Age</label>
+            <input type="number" id="stuAge" placeholder="Enter Age" required>
+            <label for="stuCourse">Course</label>
+            <select id="stuCourse">
+                <option value="Computer Science">Computer Science</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Mechanical">Mechanical</option>
+                <option value="BCA">BCA</option>
+            </select>
+            <label for="stuMarks">Marks</label>
+            <input type="number" step="0.01" id="stuMarks" placeholder="Enter Marks" required>
+            <button type="submit">Register Student</button>
+        </form>
+    </div>
+
+    <div class="card">
+        <h3>Student Records</h3>
+        <table id="studentTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Course</th>
+                    <th>Marks</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Fetched from API -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script type="module" src="student.js"></script>
+</body>
+</html>
