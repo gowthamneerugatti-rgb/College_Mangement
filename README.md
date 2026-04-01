@@ -10,7 +10,8 @@ Quick links to all the guides we've created:
 
 *   🚀 [**Quick Start (Docker)**](./DOCKER_GUIDE.md) — The easiest way to run the app in 2 minutes.
 *   💻 [**Local Setup (Windows)**](#-local-setup-guide) — How to install everything manually on your PC.
-*   📜 [**Development Changelog**](./CHANGELOG.md) — A step-by-step history of how this project was built (19-year-old friendly!).
+*   🔌 [**Database Connection Guide**](./CONNECTION_GUIDE.md) — Where to find and change your DB settings.
+*   📜 [**Development Changelog**](./CHANGELOG.md) — A step-by-step history of the build.
 
 ---
 
